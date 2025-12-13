@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: keep printing clean */
+@media print {
+  body {
+    background: white !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 6mm;
+  }
+
+  /* Scale whole dashboard to stay on 1 page */
+  .print-fit {
+    transform: scale(0.82);                /* ⬅️ reduced from 0.82 */
+    transform-origin: top left;
+    width: calc(100% / 0.82);
+  }
+
+  /* Increase vertical spacing between cards */
+  .print-grid {
+    row-gap: 32px !important;              /* ⬅️ more breathing room */
+  }
+
+  /* Slightly REDUCE padding so extra gap fits */
+  .print-card {
+    padding-top: 14px !important;          /* ⬅️ reduced */
+    padding-bottom: 14px !important;       /* ⬅️ reduced */
+  }
+
+  /* Keep charts compact */
+  .print-chart {
+    height: 230px !important;              /* ⬅️ slightly smaller */
+  }
+
+  .heat-cell {
+    height: 18px !important;
+  }
+
+  /* Remove background blobs/gradients */
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Footer */
+  .print-footer {
+    position: fixed;
+    bottom: 4mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px;
+    color: rgba(255,255,255,0.7);
+  }
+}
