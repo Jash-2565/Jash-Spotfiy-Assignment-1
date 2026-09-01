@@ -27,9 +27,12 @@
 .c-rose{--accent:#ef7684;
   --h0:#181214;--h1:#28161c;--h2:#3a1c24;--h3:#4d222c;--h4:#622934;
   --h5:#79323e;--h6:#95404d;--h7:#b85764;--h8:#dc7683}
-.c-mono{--accent:#cfe0da;
-  --h0:#131615;--h1:#1b2321;--h2:#26332f;--h3:#33443f;--h4:#425650;
-  --h5:#556c65;--h6:#6d867e;--h7:#93aca4;--h8:#c6dcd4}
+/* the rings, in Spotify's own green: one hue (141deg), monotonic in lightness, with
+   the two brand greens #1DB954 and #1ED760 sitting at h4/h5 as the mid anchors.
+   Every step clears the surface it sits on; h3 up passes 4.5:1 on --bg.          */
+.c-spotify{--accent:#1ED760;
+  --h0:#0b1c11;--h1:#143e23;--h2:#1a6133;--h3:#1e8542;--h4:#1DB954;
+  --h5:#1ED760;--h6:#2ceb6f;--h7:#49f485;--h8:#6af99c}
 .c-gold{--accent:#e0b356;
   --h0:#16140e;--h1:#241f0f;--h2:#332b10;--h3:#433710;--h4:#544410;
   --h5:#675413;--h6:#7f691b;--h7:#9e862c;--h8:#c4a944}
@@ -419,13 +422,13 @@ footer{padding:56px 0 90px;border-top:1px solid var(--line);color:var(--dim);fon
 </section>
 
 <!-- ══ IV · the whole picture ═══════════════════════════════════════════ -->
-<section class="chap c-mono" data-ch="Every day">
+<section class="chap c-spotify" data-ch="Every day">
   <div class="num">Chapter IV</div>
   <h2 class="ttl" id="ringTitle"></h2>
   <p class="ln" id="ringLine"></p>
 </section>
 
-<section class="tall c-mono" style="padding-top:0">
+<section class="tall c-spotify" style="padding-top:0">
   <div id="rings" class="rise"></div>
   <div class="split mid" style="margin-top:56px">
     <div>
